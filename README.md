@@ -12,6 +12,6 @@ Comparator is one of the fundamental building blocks in most analog-to-digital c
 ## Reference Circuit
 ![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/ref_ckt.gif)
 
-                      Double-Tail-Dynamic-Comparator
+                                    Double-Tail-Dynamic-Comparator
 ## Reference Circuit Working
 The double-tail comparator has 2 phase. In reset phase when CLK = 0, both tails such as Mtail1, and Mtail2 are off. During this time transistors M3 and M4 charge fn and fp nodes to VDD, which makes transistors MR1 and MR2 to discharge the output nodes such as outp and outn to ground. In decision-making phase, when CLK =VDD, both tail turn on, M3-M4 turn off and voltages at nodes fn and fp start to drop with the rate defined by IMtail1/Cfn(p) and a input-dependent differential voltage ΔVfn(p) will build up.  The intermediate stage formed by MR1 and MR2 passes ΔVfn(p) to the cross-coupled inverters and also provides a good shielding between input and output, resulting in reduced value of kickback noise. In reset phase when the nodes become charged from ground to VDD power consumption arises. 
