@@ -128,5 +128,9 @@ xi15 a b c net33 gnd! net50 net55 sum_block
 ```
 ## Waveforms
 ![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/Transient%20response.jpg)
+
+                                                Transient Response 
 ![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/signal%20behavior.jpg)
+
+                                                Signal Behavior
 
