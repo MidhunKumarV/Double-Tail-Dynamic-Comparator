@@ -21,9 +21,7 @@ The double-tail comparator has 2 phase. In reset phase when CLK = 0, both tails 
 ## Implementation
 ![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/ckt.jpg)
 ## Schematic Netlist
- 
-
-*  Generated for: PrimeSim
+`*  Generated for: PrimeSim
 *  Design library name: full_adder
 *  Design cell name: Carry_tb
 *  Design view name: schematic
@@ -126,7 +124,7 @@ xi15 a b c net33 gnd! net50 net55 sum_block
 
 
 
-.end
+.end`
 
 
 ## Waveforms
