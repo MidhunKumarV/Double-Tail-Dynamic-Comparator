@@ -7,6 +7,8 @@
 4. Implementation
 5. Schematic Netlist
 6. Waveforms
+7. References
+8. Acknowledgements
 ## Introduction
 Comparator is one of the fundamental building blocks in most analog-to-digital converters (ADCs). Many highspeed ADCs, such as flash ADCs, require high-speed, lowpower comparators with small chip area. Dynamic comparators are superior to static counterpart because of positive feedback which increases latching speed and lower static power consumption. As there are some drawbacks in conventional dynamic comparator a conventional double-tail comparator is used. The structure has less stacking and therefore can works at lower supply voltages on comparing with the conventional dynamic comparator. The advantage of double-tail dynamic comparator is that there is a separate input gain stage and output latch stage. The grouping of input and output stages as two distinct stages make this type of comparator to have a lower and more stable offset voltage.
 ## Reference Circuit and Waveform
@@ -97,4 +99,12 @@ v26 clk gnd! dc=0 pulse ( 0 1 0 0.001u 0.001u 0.5u 1u )
 ![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/signal%20behavior.jpg)
 
                                                 Signal Behavior
-
+## References
+[1] D. Schinkel, E. Mensink, E. Klumperink, et al. "A double-tail latch-type voltage sense amplifier with 18ps Setup+Hold time," in IEEE Int. Solid-State Circuits Conf (ISSCC),p.314-605(2007).
+[2] S. Baghel, D. K. Mishra. "Design and Analysis of Double-Tail Dynamic Comparator for Flash ADCs", 2018 International Conference on Circuits and Systems in Digital Enterprise Technology (ICCSDET), 2018
+## Acknowledgements
+Kunal Ghosh, Founder, VSD Corp. Pvt. Ltd
+Indian Institute Of Technology (IIT), Hyderabad
+Synopsys
+## Author
+Midhun Kumar V, Mtech at IIT Delhi
