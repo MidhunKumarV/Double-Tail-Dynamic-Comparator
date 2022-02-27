@@ -101,6 +101,7 @@ v26 clk gnd! dc=0 pulse ( 0 1 0 0.001u 0.001u 0.5u 1u )
                                                 Signal Behavior
 ## References
 [1] D. Schinkel, E. Mensink, E. Klumperink, et al. "A double-tail latch-type voltage sense amplifier with 18ps Setup+Hold time," in IEEE Int. Solid-State Circuits Conf (ISSCC),p.314-605(2007).
+
 [2] S. Baghel, D. K. Mishra. "Design and Analysis of Double-Tail Dynamic Comparator for Flash ADCs", 2018 International Conference on Circuits and Systems in Digital Enterprise Technology (ICCSDET), 2018
 ## Acknowledgements
 * Kunal Ghosh, Founder, VSD Corp. Pvt. Ltd
