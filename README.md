@@ -21,6 +21,6 @@ The double-tail comparator has 2 phase. In reset phase when CLK = 0, both tails 
 ## Implementation
 ![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/ckt.jpg)
 ## Waveforms
-![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/Transient response.jpg)
-![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/signal behavior.jpg)
+![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/Transient%20response.jpg)
+![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/signal%20behavior.jpg)
 
