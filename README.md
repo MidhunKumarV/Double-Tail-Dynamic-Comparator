@@ -20,6 +20,74 @@ Comparator is one of the fundamental building blocks in most analog-to-digital c
 The double-tail comparator has 2 phase. In reset phase when CLK = 0, both tails such as Mtail1, and Mtail2 are off. During this time transistors M3 and M4 charge fn and fp nodes to VDD, which makes transistors MR1 and MR2 to discharge the output nodes such as outp and outn to ground. In decision-making phase, when CLK =VDD, both tail turn on, M3-M4 turn off and voltages at nodes fn and fp start to drop with the rate defined by IMtail1/Cfn(p) and a input-dependent differential voltage ΔVfn(p) will build up.  The intermediate stage formed by MR1 and MR2 passes ΔVfn(p) to the cross-coupled inverters and also provides a good shielding between input and output, resulting in reduced value of kickback noise. In reset phase when the nodes become charged from ground to VDD power consumption arises. 
 ## Implementation
 ![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/ckt.jpg)
+## Schematic Netlist
+*  Generated for: PrimeSim
+*  Design library name: mid_lib1
+*  Design cell name: comparator
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Sun Feb 27 06:31:42 2022
+
+.global gnd!
+********************************************************************************
+* Library          : mid_lib1
+* Cell             : comparator
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xm14 clkb clk gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm6 outp net35 gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm5 outn net31 gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm4 outp outn gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm3 outn outp gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm2 net7 clk gnd! gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm1 net35 inp net7 gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm0 net31 inn net7 gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm15 clkb clk vdd vdd p105 w=0.2u l=0.03u nf=1 m=1
+xm11 net47 clkb vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+xm10 outp outn net47 vdd p105 w=0.2u l=0.03u nf=1 m=1
+xm9 outn outp net47 vdd p105 w=0.2u l=0.03u nf=1 m=1
+xm8 net35 clk vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+xm7 net31 clk vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+v28 net74 gnd! dc=0.5
+v24 vdd gnd! dc=1
+v41 net71 gnd! dc=0.5
+v42 inp net74 dc=0 pulse ( 0 0.5 2.5u 0.1u 0.1u 2.5u 5u )
+v27 inn net71 dc=0 pulse ( 0 0.5 0 0.1u 0.1u 2.5u 5u )
+v26 clk gnd! dc=0 pulse ( 0 1 0 0.001u 0.001u 0.5u 1u )
+
+
+
+
+
+
+
+
+.tran '0.1u' '20u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(clk) v(inn) v(inp) v(net31) v(net35) v(outn) v(outp)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
+
 ## Waveforms
 ![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/Transient%20response.jpg)
 ![alt text](https://github.com/MidhunKumarV/Double-Tail-Dynamic-Comparator/blob/main/Images/signal%20behavior.jpg)
